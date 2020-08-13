@@ -7,7 +7,7 @@ SLIDER_DEBUG = 25
 USERNAME = ''
 PASSWORD = ''
 # 用户cookie,可置空，格式 ： 'tt_web_id=xxxxx;sso_user=xxxx'
-COOKIE = ''
+COOKIE = 'passport_csrf_token=09db38d07c6dee57f4bfc12e1b8abc14; MONITOR_WEB_ID=7d2b5761-372d-4d24-9428-35396c6f0675; s_v_web_id=verify_kdsne35c_nOnjXLk6_siT3_4RnY_AyiT_NSQySqoy2m1J; ttcid=d4387f150b6e4f6db1e9f1149d250d9332; WEATHER_CITY=%E5%8C%97%E4%BA%AC; __tasessionId=asnw0zm3w1597313794490; csrftoken=0727e18eac6201d5101a9bbd01fe6830; sso_auth_status=db46da9c8a3b7ff76299985e61554a5d; sso_uid_tt=fb75b7734943386480abbac116ab28c6; sso_uid_tt_ss=fb75b7734943386480abbac116ab28c6; toutiao_sso_user=7df5f45ba80fdaddc840ac763676ee7b; toutiao_sso_user_ss=7df5f45ba80fdaddc840ac763676ee7b; passport_auth_status=41f9ae199b7475d9d0cacad1403698b2%2C1248c5c3ed138d446a7a29ca7dd0f978; sid_guard=6f31a69c3c0dd87d292e36db0dae71c2%7C1597313835%7C5184000%7CMon%2C+12-Oct-2020+10%3A17%3A15+GMT; uid_tt=edaf01269770a52b67c3bc4b4b966797; uid_tt_ss=edaf01269770a52b67c3bc4b4b966797; sid_tt=6f31a69c3c0dd87d292e36db0dae71c2; sessionid=6f31a69c3c0dd87d292e36db0dae71c2; sessionid_ss=6f31a69c3c0dd87d292e36db0dae71c2; tt_webid=6860410608338028045; tt_webid=6860410608338028045; tt_scid=BDvRiKod9R67z02ACiVwjQqj8QJvF6fWLs8UFaY7x4G.f4gWzfxVJirq8Z75sdb0984f'
 # 存放用户cookie的文件路径
 COOKIE_FILE = 'accessory/cookie.txt'
 

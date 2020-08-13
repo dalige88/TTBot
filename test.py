@@ -9,6 +9,7 @@ from component.user import TTUser
 if __name__ == '__main__':
     a = TTBot()
     account = a.account
+    # account.login('15133423605','123456')
     news_spider = a.news_spider
     uids = ['50502346173', '4377795668', '3640241275','70105485318','97658287933']
     # print(account.wenda_analysis())
@@ -75,7 +76,7 @@ if __name__ == '__main__':
     # u.get_published(count=2,MODE='2',MDB=1)
     # u.get_published(ALL=True,data_cb=lambda x:1)
     # u.get_followings(ALL=True,MDB=1)
-    # a.login()
+    # a.login('15133423605','123456')
     # a.login_helper.stop()
     # a.search('Java',MDB=1)
     # a.get_regimen_news(MDB=1, ALL=True)
