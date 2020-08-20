@@ -6,23 +6,52 @@ from component.user import TTUser
 # def ass(res):
 #     print(res)
 #
+
+a = TTBot()
+account = a.account
+
+# 获取个人信息
+def get_userinfo():
+    print( account.user_info)
+    # print(account.get_unread_fans_count())
+    # print(account.get_wenda_invited_count())
+    # print(account.get_sensitive_op_log(pagesize=1))
+    # print(account.unstar_resource_img('pgc-image/a8dc04c83f194adc9d0b56365e42fe50'))
+    # print(account.get_notification_count())
+
+    # user = TTUser('808841720377389')
+    # 获取用户发布的所有文章并存储
+    # articles = user.get_published(ALL=True,MDB=True)
+    # print(account.get_followings(ALL=True,MDB=0))
+    # print(account.get_fans(ALL=True,MDB=0))
+    print(account.get_fans(count=1,MDB=0))
+    # print(user.get_fans(MDB=True))
+
+
+
+
+
+
 if __name__ == '__main__':
-    a = TTBot()
-    account = a.account
-    # account.login('15133423605','123456')
-    news_spider = a.news_spider
-    uids = ['50502346173', '4377795668', '3640241275','70105485318','97658287933']
+    get_userinfo()
+    # a = TTBot()
+    # account = a.account
+
+    # # account.login('15133423605','123456')
+    # news_spider = a.news_spider
+    # uids = ['50502346173', '4377795668', '3640241275','70105485318','97658287933']
+    
     # print(account.wenda_analysis())
     # print(account.delete_article('6602141020383609358'))
     # print(account.unstore_media('6711635660941296132'))
     # print(account.unhide_article('6711941566493098504'))
-    print(account.get_unread_fans_count())
-    print(account.get_wenda_invited_count())
-    print(account.get_sensitive_op_log(pagesize=1))
-    print(account.unstar_resource_img('pgc-image/a8dc04c83f194adc9d0b56365e42fe50'))
+    # print(account.get_unread_fans_count())
+    # print(account.get_wenda_invited_count())
+    # print(account.get_sensitive_op_log(pagesize=1))
+    # print(account.unstar_resource_img('pgc-image/a8dc04c83f194adc9d0b56365e42fe50'))
     # print(account.delete_articles(status='checking',keyword='粉丝'))
     # print(account.delete_question('6711866197685567758'))
-    print(account.get_wenda_drafts(MDB=1))
+    # print(account.get_wenda_drafts(MDB=1))
     # print(account.get_wenda_questions(MDB=1))
     # for i in range(20,26):
     #     time.sleep(1)

@@ -45,6 +45,9 @@ class TTAcount:
     def user_info(self):
         if not self._account_info:
             self.get_account_info()
+            # print(self.login_headers)
+        # print("________________________________")
+        # print(self._account_info)
         return self._account_info
 
     @property

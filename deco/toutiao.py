@@ -11,6 +11,7 @@ from inspect import isfunction
 logger = getLogger(__name__)
 
 def check(func):
+    
     def wrapper(self,*args,**kwargs):
         cookie = 0
         if COOKIE:
@@ -30,8 +31,11 @@ def check(func):
     return wrapper
 
 def login_required(func):
+
     def wrapper(self,*args,**kwargs):
+
         if self.login_headers is None:
+            # print(self.login)
             self.login()
         return func(self,*args,**kwargs)
     return wrapper

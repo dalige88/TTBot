@@ -4,7 +4,7 @@ from util.user import *
 from copy import deepcopy
 from component.log import getLogger
 from component.dbhelper import Database
-from config import MONGODB,MAX_RETRY
+from config import MONGODB,MAX_RETRY,COOKIE_FILE,COOKIE
 from util.request import send_request
 from settings import  HEADERS_USER_ARTICLE,MODE_MAP,\
     API_USER_WEITT,API_USER_ARTICLE,HEADERS,APIS
@@ -76,13 +76,21 @@ def choose(option,api=None,method='get'):
                 MDB.use_db(dbname)
             while 1:
                 params = payload_for_relation(self.id,cursor)
+                # print('111111url')
+                # print(params)
+                login_headers = {            
+                                'cookie': COOKIE  
+                }
+                #HEADERS
                 response = send_request(method, url,
                                         params=params,
                                         JSON=True,
                                         session=self.session,
                                         retries=retries,
                                         DATA=1,
-                                        headers=HEADERS)
+                                        headers= login_headers)
+                # print(response)
+                # return
                 data = response.get('data')
                 if bool(data):
                     cursor = response.get('cursor')

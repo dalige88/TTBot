@@ -26,10 +26,18 @@ def replace_by_list(src,str_list,re_list):
 def dict_str_to_json(src):
     _ = []
     src = re.sub('[{}]','',src)
+    print('aaaaaaaaaaaaaaaaa')
+    print(src)
+    print('bbbbbbb')
+    src = src.replace('https://','https%3a%2f%2f')
+    
+
     for item in src.split(','):
+        # print(item)
         a,b = item.split(':')
         _.append('"'+a+'"'+":"+b)
     res  = '{'+','.join(_)+'}'
+    print(str(res))
     res = json.loads(res)
     return res
 

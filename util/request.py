@@ -29,8 +29,12 @@ def send_request(method,
         attempt = retries + 1
     while attempt != 0:
         try:
+            print(url)
+            # print(method)
+            print(kwargs['headers'])
             response = session.request(method,url,**kwargs)
             code = response.status_code
+            # print(response.text)
         except Exception as e:
             logger.error(f'[请求异常]{e.__class__.__name__}:{e}')
             kwargs['proxies'] = get_proxy()
@@ -44,9 +48,13 @@ def send_request(method,
             attempt -= 1
             continue
         if JSON:
+            # for item in response:
+            #     print(item)
+            print(response)
             try:
                 response = response.json()
             except Exception as e:
+                print(e)
                 logger.error(f'[无效json格式]{e.__class__.__name__}:{e}')
                 if proxy_on:
                     kwargs['proxies'] = get_proxy()

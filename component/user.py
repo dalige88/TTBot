@@ -11,6 +11,8 @@ from util.request import send_request
 from util.jstool import payload_for_get
 from requests.adapters import HTTPAdapter
 from util.user import published_data_cleaner
+from deco.toutiao import check,login_required
+
 
 logger = getLogger(__name__)
 
